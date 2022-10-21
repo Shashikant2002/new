@@ -9,6 +9,7 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+
         * {
             margin: 0;
             padding: 0;
@@ -24,7 +25,7 @@
             padding: 30px;
             background: #e48724;
         }
-        
+
         .main {
             max-width: 600px;
             background: #fe9961;
@@ -33,13 +34,26 @@
             border-radius: 10px;
             animation: back 1s linear infinite;
         }
+
         @keyframes back {
-            0%{background-color: #fe9961;}
-            25%{background-color: rgb(243, 100, 49);}
-            50%{background-color: #e48724;}
-            100%{background-color: #fe9961;}
-            
+            0% {
+                background-color: #fe9961;
+            }
+
+            25% {
+                background-color: rgb(243, 100, 49);
+            }
+
+            50% {
+                background-color: #e48724;
+            }
+
+            100% {
+                background-color: #fe9961;
+            }
+
         }
+
         .maindiv {
             margin: 0 auto;
             width: 100%;
@@ -100,31 +114,40 @@
         .bright {
             box-shadow: rgb(255, 255, 255) 0px -10px 5px 3px, #ff8000 0px -10px 5px 6px, rgb(255, 217, 19) 0px -10px 5px 9px, rgb(255, 156, 85) 0px -10px 5px 12px, rgb(255, 85, 85) 0px -10px 10px 15px;
         }
-        .diwali{
+
+        .diwali {
             width: 100%;
             height: 50%;
             text-align: center;
             margin-top: 30px;
             display: inline-block;
         }
-        .diwali img{
+
+        .diwali img {
             height: 100%;
         }
-        .diwali h2{
+
+        .diwali h2 {
             margin-top: 30px;
             font-size: 4rem;
             font-family: 'Fasthand', cursive;
             animation: color_text 1s linear infinite;
             color: rgb(255, 255, 255);
         }
+
         @media (max-width: 450px) {
-            .main{
+            .main {
                 padding: 20px;
             }
-            .diwali h2{
+
+            .diwali h2 {
                 margin-top: 30px;
                 font-size: 2.5rem;
                 font-family: 'Fasthand', cursive;
+            }
+
+            .diwali img {
+                width: 60%;
             }
         }
     </style>
