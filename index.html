@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all .5s;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            background: #e48724;
+        }
+        
+        .main {
+            max-width: 600px;
+            background: #fe9961;
+            width: 100%;
+            padding: 50px;
+            border-radius: 10px;
+            animation: back 1s linear infinite;
+        }
+        @keyframes back {
+            0%{background-color: #fe9961;}
+            25%{background-color: rgb(243, 100, 49);}
+            50%{background-color: #e48724;}
+            100%{background-color: #fe9961;}
+            
+        }
+        .maindiv {
+            margin: 0 auto;
+            width: 100%;
+            height: 500px;
+            position: relative;
+            border-radius: 5px;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .dotted1 {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            width: 100%;
+            top: 0px;
+        }
+
+        .dotted2 {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            position: absolute;
+            height: 100%;
+            right: 0px;
+            top: 0;
+        }
+
+        .dotted3 {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            position: absolute;
+            width: 100%;
+            bottom: 0px;
+        }
+
+        .dotted4 {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column-reverse;
+            position: absolute;
+            height: 100%;
+            top: 0;
+            left: 0px;
+        }
+
+        .dot {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background: rgb(218, 218, 218);
+            box-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+        }
+
+        .bright {
+            box-shadow: rgb(255, 255, 255) 0px -10px 5px 3px, #ff8000 0px -10px 5px 6px, rgb(255, 217, 19) 0px -10px 5px 9px, rgb(255, 156, 85) 0px -10px 5px 12px, rgb(255, 85, 85) 0px -10px 10px 15px;
+        }
+        .diwali{
+            width: 100%;
+            height: 50%;
+            text-align: center;
+            margin-top: 30px;
+            display: inline-block;
+        }
+        .diwali img{
+            height: 100%;
+        }
+        .diwali h2{
+            margin-top: 30px;
+            font-size: 4rem;
+            font-family: 'Fasthand', cursive;
+            animation: color_text 1s linear infinite;
+            color: rgb(255, 255, 255);
+        }
+        @media (max-width: 450px) {
+            .main{
+                padding: 20px;
+            }
+            .diwali h2{
+                margin-top: 30px;
+                font-size: 2.5rem;
+                font-family: 'Fasthand', cursive;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="maindiv">
+            <div class="diwali">
+                <img src="./538cc362859a434c03691bc48301b154.gif" alt="">
+                <h2>Happy Diwali</h2>
+            </div>
+            <div class="dotted1">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <div class="dotted2">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <div class="dotted3 flex">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <div class="dotted4">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const dot = document.querySelectorAll('.dot');
+        let count = 2
+
+        setInterval(() => {
+            (function () {
+                for (i = 0; i < dot.length; i++) {
+                    dot[i].classList.remove('bright');
+                }
+                dot[count].classList.add('bright');
+                count++;
+                if (count == dot.length) {
+                    count = 0;
+                }
+            })();
+        }, 600);
+    </script>
+</body>
+
+</html>
